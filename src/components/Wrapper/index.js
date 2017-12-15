@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { array } from 'prop-types';
 
 import Header from '../Header';
 import Table from '../Table';
-import { array } from 'prop-types';
+import Profile from '../Profile';
+import Styles from './styles.scss';
 
 export default class Wrapper extends Component {
     static propTypes = {
@@ -23,13 +25,18 @@ export default class Wrapper extends Component {
     }
 
     render () {
-        console.log(this.state.users);
+        const user = this.state.users[0];
 
         return (
-            <div>
+            <div className = { Styles.wrapper }>
                 <Header />
-                {/*<Proile />*/}
-                <Table deleteUser = { this.deleteUser } users = { this.state.users } />
+                <main>
+                    <Profile user = { user } />
+                    <Table
+                        deleteUser = { this.deleteUser }
+                        users = { this.state.users }
+                    />
+                </main>
             </div>
         );
     }

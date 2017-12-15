@@ -1,0 +1,11 @@
+@import '../../theme/palette';
+
+.table {
+  width: 76%;
+  background-color: $background-main-color;
+
+  table{
+    table-layout: fixed;
+    width: 100%;
+  }
+}

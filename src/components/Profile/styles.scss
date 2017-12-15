@@ -1,0 +1,41 @@
+@import '../../theme/palette';
+
+.profile {
+  width: 24%;
+  background-color: $background-main-color;
+  padding: 0 32px;
+  border: 1px solid $border-main-color;
+  margin-top: -1px;
+  color: $text-main-color;
+
+  .personal{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-main-color;
+    padding: 32px 0;
+  }
+
+  .imageWrap{
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 24px;
+    background-color: $backgound-image-color;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  h4{
+    font-size: 14px;
+    margin: 0;
+  }
+}

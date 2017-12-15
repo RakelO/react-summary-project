@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
 export default class Row extends Component {
     static propTypes = {};
@@ -17,7 +17,7 @@ export default class Row extends Component {
             avatar,
             index,
             fullName,
-            userfullName,
+            userName,
             totalItems,
             userStatus,
             totalIncome
@@ -32,7 +32,7 @@ export default class Row extends Component {
                     </div>
                 </td>
                 <td>{fullName}</td>
-                <td>{userfullName}</td>
+                <td>{userName}</td>
                 <td>{totalItems}</td>
                 <td>{userStatus}</td>
                 <td>{totalIncome}</td>

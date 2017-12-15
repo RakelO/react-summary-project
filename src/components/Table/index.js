@@ -26,14 +26,14 @@ export default class Table extends Component {
         ));
 
         return (
-            <div classfullName = { Styles.table }>
+            <div className = { Styles.table }>
                 <table>
                     <thead>
                         <tr>
                             <td>#</td>
                             <td>Avatar</td>
                             <td>Full fullName</td>
-                            <td>UserfullName</td>
+                            <td>Username</td>
                             <td>Total items</td>
                             <td>User status</td>
                             <td>Total income</td>
