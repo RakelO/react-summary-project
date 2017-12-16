@@ -1,0 +1,14 @@
+@import '../../theme/palette';
+@import '../../theme/common';
+
+.row {
+  cursor: pointer;
+
+  &.selected{
+    background-color: $secondary-color;
+  }
+
+  svg {
+    fill: $icons-color;
+  }
+}

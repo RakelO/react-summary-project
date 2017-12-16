@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 
 import Styles from './styles.scss';
+import { shape, string } from 'prop-types';
 
 export default class Profile extends Component {
+    static propTypes = {
+        user: shape({
+            avatar:   string.isRequired,
+            fullName: string.isRequired,
+            userName: string.isRequired
+        })
+    };
     render () {
         const { user } = this.props;
 
@@ -10,7 +18,7 @@ export default class Profile extends Component {
             <section className = { Styles.profile }>
                 <div className = { Styles.personal }>
                     <div className = { Styles.imageWrap }>
-                        <img src = { user.avatar } alt = { user.fullName } />
+                        <img alt = { user.fullName } src = { user.avatar } />
                     </div>
                     <div>
                         <h3>{user.fullName}</h3>

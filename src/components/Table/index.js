@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { array, func } from 'prop-types';
+import { array, func, string } from 'prop-types';
 
 import Styles from './styles.scss';
 import Row from '../Row';
@@ -7,20 +7,20 @@ import Row from '../Row';
 export default class Table extends Component {
     static propTypes = {
         deleteUser: func.isRequired,
+        selectedId: string.isRequired,
+        selectUser: func.isRequired,
         users:      array.isRequired
     };
-    // constructor () {
-    //     super();
-    //     this.deleteUser = ::this._deleteUser;
-    // }
 
     render () {
-        const { users, deleteUser } = this.props;
+        const { users, deleteUser, selectedId, selectUser } = this.props;
         const row = users.map((user, index) => (
             <Row
                 deleteUser = { deleteUser }
                 index = { index }
                 key = { user.id }
+                selected = { selectedId === user.id }
+                selectUser = { selectUser }
                 { ...user }
             />
         ));

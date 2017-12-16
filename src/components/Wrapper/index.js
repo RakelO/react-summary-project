@@ -13,9 +13,15 @@ export default class Wrapper extends Component {
     constructor (props) {
         super(props);
         this.deleteUser = ::this._deleteUser;
+        this.toggleContent = ::this._toggleContent;
+        this.handleSearch = ::this._handleSearch;
+        this.selectUser = ::this._selectUser;
     }
     state = {
-        users: this.props.users
+        users:       this.props.users,
+        openContent: true,
+        searchInput: '',
+        selectedId:  this.props.users[0].id
     };
 
     _deleteUser (id) {
@@ -24,19 +30,46 @@ export default class Wrapper extends Component {
         });
     }
 
+    _toggleContent () {
+        this.setState({ openContent: !this.state.openContent });
+    }
+
+    _handleSearch (input) {
+        this.setState({ searchInput: input });
+    }
+
+    _selectUser (id) {
+        this.setState({ selectedId: id });
+    }
+
     render () {
-        const user = this.state.users[0];
+        const { openContent, searchInput, users, selectedId } = this.state;
+        const foundSelectedUser = users.find((item) => item.id === selectedId);
+        const selectedUser = foundSelectedUser ? foundSelectedUser : users[0];
+        const filteredUsers = users.filter((item) =>
+            item.fullName
+                .toLocaleLowerCase()
+                .includes(searchInput.toLocaleLowerCase())
+        );
 
         return (
             <div className = { Styles.wrapper }>
-                <Header />
-                <main>
-                    <Profile user = { user } />
-                    <Table
-                        deleteUser = { this.deleteUser }
-                        users = { this.state.users }
-                    />
-                </main>
+                <Header
+                    handleSearch = { this.handleSearch }
+                    openContent = { openContent }
+                    toggleContent = { this.toggleContent }
+                />
+                {openContent && (
+                    <main>
+                        <Profile user = { selectedUser } />
+                        <Table
+                            deleteUser = { this.deleteUser }
+                            selectedId = { selectedUser.id }
+                            selectUser = { this.selectUser }
+                            users = { filteredUsers }
+                        />
+                    </main>
+                )}
             </div>
         );
     }
