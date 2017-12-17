@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Delete = () => (
+const Gear = () => (
     <svg height = '24' viewBox = '0 0 22 22' width = '24'>
         <g fillRule = 'evenodd'>
             <path
@@ -11,4 +11,4 @@ const Delete = () => (
     </svg>
 );
 
-export default Delete;
+export default Gear;
