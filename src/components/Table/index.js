@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { array, func, string } from 'prop-types';
 
 import Styles from './styles.scss';
-import Row from '../Row';
 
 export default class Table extends Component {
     static propTypes = {

@@ -8,7 +8,8 @@ configure({ adapter: new Adapter() });
 
 const props = {
     toggleContent: jest.fn(),
-    handleSearch:  jest.fn()
+    handleSearch:  jest.fn(),
+    openContent:   true
 };
 const result = shallow(<Header { ...props } />);
 
