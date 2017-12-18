@@ -11,7 +11,7 @@ const props = {
     deleteUser: jest.fn(),
     selectedId: '',
     selectUser: jest.fn(),
-    users:      new Array(5)
+    users:      new Array(5).fill({})
 };
 
 const result = mount(<Table { ...props } />);
@@ -27,10 +27,8 @@ describe('Table component', () => {
         expect(result.find('tbody')).toHaveLength(1);
     });
     test(`should have 'row' elements to be equal users length`, () => {
-        const users = props.users.length;
-        console.log(users);
-        console.log(result.find('Row'));
+        const userLength = props.users.length;
 
-        expect(result.find('Row').length).toHaveLength(users);
+        expect(result.find('Row')).toHaveLength(userLength);
     });
 });
