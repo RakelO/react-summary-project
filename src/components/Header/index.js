@@ -35,7 +35,7 @@ export default class Header extends Component {
                         type = 'search'
                         onChange = { this.handleSearch }
                     />
-                    <button onClick = { toggleContent }>
+                    <button className = 'toggle-content' onClick = { toggleContent }>
                         <Chevron rotate = { openContent } />
                     </button>
                     <button>

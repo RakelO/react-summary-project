@@ -5,25 +5,35 @@
   cursor: pointer;
 
   svg{
-    //fill: #2cc55e;
+    fill: #2cc55e;
     stroke: #2cc55e;
   }
 
-  button svg {
+  button svg{
     fill: $icons-color;
     stroke: none;
+
+    &:hover{
+      stroke: $icons-color;
+    }
   }
 
   &.selected{
     background-color: $secondary-color;
 
     svg {
+      fill: $background-main-color;
       stroke: $background-main-color;
     }
-    button svg {
+
+    button svg{
       stroke: none;
+
+      &:hover {
+        stroke: $background-main-color;
+      }
     }
-  }
+}
 
   .imageWrap {
     width: 25px;

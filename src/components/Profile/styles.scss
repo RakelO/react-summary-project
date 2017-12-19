@@ -54,6 +54,7 @@
       color: $charts-text-color;
       margin: 20px 0 0;
       text-align: center;
+      text-transform: capitalize;
     }
   }
 
@@ -76,20 +77,5 @@
       font-size: 12px;
       text-transform: uppercase;
     }
-  }
-
-  .chart{
-    height: 74px;
-    width: 45px;
-    background-color: $charts-background-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .chartsFill{
-    width: 100%;
-    background-color: $secondary-color;
-    transition: height .5s ease-in;
   }
 }

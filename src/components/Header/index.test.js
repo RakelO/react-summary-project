@@ -15,7 +15,7 @@ const result = shallow(<Header { ...props } />);
 
 describe('Header ', () => {
     test(`should invoke 'toggleContent' func when 'Chevron' button is clicked`, () => {
-        const chevronButton = result.find('button').first();
+        const chevronButton = result.find('.toggle-content').first();
 
         chevronButton.simulate('click');
         expect(props.toggleContent).toHaveBeenCalledTimes(1);
