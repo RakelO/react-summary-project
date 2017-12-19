@@ -26,9 +26,10 @@ export default class Row extends Component {
         this.selectUser = ::this._selectUser;
     }
     _deleteUser (e) {
+        e.stopPropagation();
+
         const { deleteUser, id } = this.props;
 
-        e.stopPropagation();
         deleteUser(id);
     }
     _selectUser () {
@@ -51,9 +52,9 @@ export default class Row extends Component {
 
         return (
             <tr className = { classSet } key = { index } onClick = { this.selectUser }>
-                <td>{index + 1}</td>
+                <td>{index + 1}.</td>
                 <td>
-                    <div>
+                    <div className = { Styles.imageWrap }>
                         <img alt = { fullName } src = { avatar } />
                     </div>
                 </td>

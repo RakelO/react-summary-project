@@ -4,13 +4,13 @@ import { bool } from 'prop-types';
 const Check = ({ check }) =>
     check ? (
         <svg height = '9' viewBox = '0 0 13 9' width = '13'>
-            <g fill = 'none' fillRule = 'evenodd'>
-                <path d = 'M-2-5h18v18H-2z' />
+            <g fillRule = 'evenodd'>
+                {/*<path d = 'M-2-5h18v18H-2z' />*/}
                 <path
                     d = 'M1.347 4.02a.5.5 0 0 0-.694.719l3.75 3.62a.5.5 0 0 0 .694 0l7.25-7a.5.5 0 0 0-.694-.719L4.75 7.305 1.347 4.02z'
-                    fill = '#2cc55e'
+                    // fill = '#2cc55e'
                     fillRule = 'nonzero'
-                    stroke = '#2cc55e'
+                    // stroke = '#2cc55e'
                 />
             </g>
         </svg>

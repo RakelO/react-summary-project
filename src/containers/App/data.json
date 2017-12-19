@@ -1,0 +1,139 @@
+{
+  "users": [
+    {
+      "id": "tH3bDYXjfTZ054d",
+      "fullName": "Michael Scott",
+      "userName": "Boss",
+      "totalItems": 74,
+      "userStatus": false,
+      "totalIncome": 50000,
+      "avatar": "assets/avatar-first.png",
+      "income": {
+        "weekly": 131,
+        "monthly": 519,
+        "yearly": 8077,
+        "monthDif": 22,
+        "last10Days": [
+          18,
+          0,
+          12,
+          14,
+          11,
+          20,
+          1,
+          15,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "GgZS5S23QNbX7RV",
+      "fullName": "Pam Beesly",
+      "userName": "Beesly",
+      "totalItems": 32,
+      "userStatus": true,
+      "totalIncome": 5000,
+      "avatar": "assets/avatar-third.png",
+      "income": {
+        "weekly": 69,
+        "monthly": 220,
+        "yearly": 3657,
+        "monthDif": 111,
+        "last10Days": [
+          10,
+          14,
+          12,
+          1,
+          14,
+          18,
+          13,
+          8,
+          15,
+          5
+        ]
+      }
+    },
+    {
+      "id": "90XsXtKpkdPv05C",
+      "fullName": "Jim Halpert",
+      "userName": "Halpert",
+      "totalItems": 87,
+      "userStatus": true,
+      "totalIncome": 28000,
+      "avatar": "assets/avatar-second.png",
+      "income": {
+        "weekly": 120,
+        "monthly": 326,
+        "yearly": 7933,
+        "monthDif": 141,
+        "last10Days": [
+          9,
+          20,
+          18,
+          4,
+          5,
+          9,
+          6,
+          2,
+          2,
+          12
+        ]
+      }
+    },
+    {
+      "id": "dksTunbvQVU6P1D",
+      "fullName": "Phyllis Vance",
+      "userName": "Vance",
+      "totalItems": 65,
+      "userStatus": true,
+      "totalIncome": 17000,
+      "avatar": "assets/avatar-fourth.png",
+      "income": {
+        "weekly": 114,
+        "monthly": 693,
+        "yearly": 6995,
+        "monthDif": 17,
+        "last10Days": [
+          7,
+          3,
+          19,
+          9,
+          1,
+          17,
+          12,
+          9,
+          3,
+          7
+        ]
+      }
+    },
+    {
+      "id": "UTPLbKU0RuVrlza",
+      "fullName": "Dwight Schrute",
+      "userName": "Schrute",
+      "totalItems": 63,
+      "userStatus": true,
+      "totalIncome": 26000,
+      "avatar": "assets/avatar-fifth.png",
+      "income": {
+        "weekly": 7,
+        "monthly": 484,
+        "yearly": 8900,
+        "monthDif": 128,
+        "last10Days": [
+          6,
+          12,
+          8,
+          18,
+          6,
+          3,
+          9,
+          12,
+          1,
+          7
+        ]
+      }
+    }
+  ]
+}

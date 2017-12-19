@@ -38,4 +38,58 @@
     font-size: 14px;
     margin: 0;
   }
+
+  .chartsWrap {
+    padding: 24px 0;
+    display: flex;
+  }
+
+  .verticalCharts {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    h6{
+      font-size: 12px;
+      color: $charts-text-color;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+  }
+
+  .monthDif {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+    h4 {
+      color: $secondary-color;
+      font-size: 34px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h6{
+      color: $charts-text-color;
+      margin: 10px 0 0;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .chart{
+    height: 74px;
+    width: 45px;
+    background-color: $charts-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .chartsFill{
+    width: 100%;
+    background-color: $secondary-color;
+    transition: height .5s ease-in;
+  }
 }

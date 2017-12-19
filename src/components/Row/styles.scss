@@ -4,11 +4,52 @@
 .row {
   cursor: pointer;
 
-  &.selected{
-    background-color: $secondary-color;
+  svg{
+    //fill: #2cc55e;
+    stroke: #2cc55e;
   }
 
-  svg {
+  button svg {
     fill: $icons-color;
+    stroke: none;
+  }
+
+  &.selected{
+    background-color: $secondary-color;
+
+    svg {
+      stroke: $background-main-color;
+    }
+    button svg {
+      stroke: none;
+    }
+  }
+
+  .imageWrap {
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: $backgound-image-color;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  td {
+    border-top: 1px solid $border-main-color;
+    border-bottom: 1px solid $border-main-color;
+    border-right: none;
+    border-left: none;
+    padding: 20px 0;
+
+    &:first-child{
+      border-left: 1px solid $border-main-color;
+    }
+
+    &:last-child{
+      border-right: 1px solid $border-main-color;
+    }
   }
 }

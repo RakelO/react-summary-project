@@ -3,7 +3,7 @@ import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import Table from './';
-import Row from '../Row';
+import { users } from '../../containers/App/data';
 
 configure({ adapter: new Adapter() });
 
@@ -11,7 +11,7 @@ const props = {
     deleteUser: jest.fn(),
     selectedId: '',
     selectUser: jest.fn(),
-    users:      new Array(5).fill({})
+    users
 };
 
 const result = mount(<Table { ...props } />);
