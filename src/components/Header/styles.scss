@@ -9,6 +9,8 @@
   color: $text-main-color;
   border: 1px solid $border-main-color;
   background-color: $background-main-color;
+  position: relative;
+  z-index: 2;
 
   h1 {
     font-size: 20px;

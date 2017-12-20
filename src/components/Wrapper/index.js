@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { array } from 'prop-types';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import Header from '../Header';
 import Table from '../Table';
@@ -18,11 +19,20 @@ export default class Wrapper extends Component {
         this.selectUser = ::this._selectUser;
     }
     state = {
-        users:       this.props.users,
+        users:       [],
         openContent: true,
         searchInput: '',
-        selectedId:  this.props.users[0].id
+        selectedId:  ''
     };
+
+    componentWillMount () {
+        const { users } = this.props;
+
+        this.setState({
+            users,
+            selectedId: users[0].id
+        });
+    }
 
     _deleteUser (id) {
         this.setState({
@@ -59,17 +69,35 @@ export default class Wrapper extends Component {
                     openContent = { openContent }
                     toggleContent = { this.toggleContent }
                 />
-                {openContent && (
-                    <main>
-                        <Profile user = { selectedUser } />
-                        <Table
-                            deleteUser = { this.deleteUser }
-                            selectedId = { selectedUser.id }
-                            selectUser = { this.selectUser }
-                            users = { filteredUsers }
-                        />
-                    </main>
-                )}
+
+                {openContent &&
+                <CSSTransition
+                    transitionName="example"
+                    appear
+                    leave
+                    classNames = { {
+                        appear:       Styles.mainInStart,
+                        appearActive: Styles.mainInEnd,
+                        leave:        Styles.mainOutStart,
+                        leaveActive:  Styles.mainOutEnd
+                    } }
+                    in = { openContent }
+                    out = { !openContent }
+                    timeout = { { appear: 700, leave: 700 } }>
+                    {filteredUsers.length ?
+                        <main>
+                            <Profile user = { selectedUser } />
+                            <Table
+                                deleteUser = { this.deleteUser }
+                                selectedId = { selectedUser.id }
+                                selectUser = { this.selectUser }
+                                users = { filteredUsers }
+                            />
+                        </main>
+                        : <div className = { Styles.error }>Sorry! No users left</div>
+                    }
+                </CSSTransition>
+                }
             </div>
         );
     }
