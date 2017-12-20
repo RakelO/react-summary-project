@@ -27,7 +27,7 @@ export default class Table extends Component {
 
         return (
             <div className = { Styles.table }>
-                <table>
+                <table border = '1'>
                     <thead>
                         <tr>
                             <td>#</td>
