@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { array } from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
-
 import Header from '../Header';
 import Table from '../Table';
 import Profile from '../Profile';
@@ -69,22 +67,8 @@ export default class Wrapper extends Component {
                     openContent = { openContent }
                     toggleContent = { this.toggleContent }
                 />
-
                 {openContent &&
-                <CSSTransition
-                    transitionName="example"
-                    appear
-                    leave
-                    classNames = { {
-                        appear:       Styles.mainInStart,
-                        appearActive: Styles.mainInEnd,
-                        leave:        Styles.mainOutStart,
-                        leaveActive:  Styles.mainOutEnd
-                    } }
-                    in = { openContent }
-                    out = { !openContent }
-                    timeout = { { appear: 700, leave: 700 } }>
-                    {filteredUsers.length ?
+                    (filteredUsers.length ?
                         <main>
                             <Profile user = { selectedUser } />
                             <Table
@@ -95,9 +79,7 @@ export default class Wrapper extends Component {
                             />
                         </main>
                         : <div className = { Styles.error }>Sorry! No users left</div>
-                    }
-                </CSSTransition>
-                }
+                    )}
             </div>
         );
     }
